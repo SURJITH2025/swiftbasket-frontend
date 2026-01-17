@@ -4,9 +4,7 @@ export default defineConfig({
   server: {
     host: true,
     port: 3000,
-    allowedHosts: [
-      ".csb.app",       // CodeSandbox domains
-      "localhost"
-    ]
+    allowedHosts: "all"
+
   }
 });
