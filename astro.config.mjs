@@ -1,6 +1,16 @@
-import { defineConfig } from 'astro/config';
-import react from '@astrojs/react';
+import { defineConfig } from "astro/config";
+import react from "@astrojs/react";
 
 export default defineConfig({
-  integrations: [react()]
+  integrations: [react()],
+  vite: {
+    server: {
+      host: true,
+      port: 4321,
+      allowedHosts: [
+        ".csb.app",
+        "localhost"
+      ]
+    }
+  }
 });
